@@ -1,0 +1,79 @@
+option.FSR2_SCALE=AMD FSR 2.3.3 Scale
+option.FSR2_SCALE.comment=Selects the output-to-source linear scale used by FSR 2.3.3. 1.0 is native AA; larger values reduce the final composition resolution before temporal reconstruction. The Minecraft G-buffer remains full-size for Distant Horizons and Voxy compatibility.
+value.FSR2_SCALE.0.0=Off
+value.FSR2_SCALE.1.0=1.0x
+value.FSR2_SCALE.1.5=1.5x
+value.FSR2_SCALE.1.75=1.75x
+value.FSR2_SCALE.2.0=2.0x
+value.FSR2_SCALE.3.0=3.0x
+
+option.OFFLINE_MODE=Offline Mode
+option.OFFLINE_MODE.comment=Select 4, 8, 12, or 16 GI samples per pixel per frame while the camera is still, bypass GI temporal/spatial denoising, and accumulate the final image without a frame limit. Off uses real-time rendering.
+value.OFFLINE_MODE.0=Off
+value.OFFLINE_MODE.4=4 Samples
+value.OFFLINE_MODE.8=8 Samples
+value.OFFLINE_MODE.12=12 Samples
+value.OFFLINE_MODE.16=16 Samples
+
+option.GI_SAMPLES=Real-time GI Samples per Frame
+option.GI_SAMPLES.comment=Controls GI samples per pixel per frame while moving or with Offline Mode off. Zero disables real-time GI; a stationary camera in Offline Mode uses the sample count selected by the offline slider.
+value.GI_SAMPLES.0=Off
+value.GI_SAMPLES.1=1 Sample/Frame
+value.GI_SAMPLES.2=2 Samples/Frame
+value.GI_SAMPLES.4=4 Samples/Frame
+value.GI_SAMPLES.6=6 Samples/Frame
+value.GI_SAMPLES.8=8 Samples/Frame
+
+option.GI_BOUNCES=Path Tracing Bounces
+option.GI_BOUNCES.comment=Controls the maximum bounce count for both diffuse GI and GGX specular reflections, from 1 to 5. Higher values capture additional indirect bounces at a significant performance cost.
+value.GI_BOUNCES.1=1 Bounce
+value.GI_BOUNCES.2=2 Bounces
+value.GI_BOUNCES.3=3 Bounces
+value.GI_BOUNCES.4=4 Bounces
+value.GI_BOUNCES.5=5 Bounces
+
+option.sunPathRotation=Sun Angle
+option.sunPathRotation.comment=Tilt the sun and moon path from -60 to 60 degrees. Default 0 puts the noon sun overhead; the day/night cycle continues. End flashes keep their own direction.
+value.sunPathRotation.-60.0=-60°
+value.sunPathRotation.-55.0=-55°
+value.sunPathRotation.-50.0=-50°
+value.sunPathRotation.-45.0=-45°
+value.sunPathRotation.-40.0=-40°
+value.sunPathRotation.-35.0=-35°
+value.sunPathRotation.-30.0=-30°
+value.sunPathRotation.-25.0=-25°
+value.sunPathRotation.-20.0=-20°
+value.sunPathRotation.-15.0=-15°
+value.sunPathRotation.-10.0=-10°
+value.sunPathRotation.-5.0=-5°
+value.sunPathRotation.0.0=0° (Overhead)
+value.sunPathRotation.5.0=5°
+value.sunPathRotation.10.0=10°
+value.sunPathRotation.15.0=15°
+value.sunPathRotation.20.0=20°
+value.sunPathRotation.25.0=25°
+value.sunPathRotation.30.0=30°
+value.sunPathRotation.35.0=35°
+value.sunPathRotation.40.0=40°
+value.sunPathRotation.45.0=45°
+value.sunPathRotation.50.0=50°
+value.sunPathRotation.55.0=55°
+value.sunPathRotation.60.0=60°
+
+
+
+
+option.DI_QUALITY=Emissive lighting quality
+option.DI_QUALITY.comment=Off restores original GI emitter hits and disables NEE/MIS, ReSTIR and direct-light Sundial. Nonzero enables all three with the selected count for both direct and indirect candidates.
+value.DI_QUALITY.0=Off (original GI)
+value.DI_QUALITY.1=1 candidates
+value.DI_QUALITY.2=2 candidates
+value.DI_QUALITY.4=4 candidates
+value.DI_QUALITY.8=8 candidates
+value.DI_QUALITY.16=16 candidates
+value.DI_QUALITY.32=32 candidates
+
+option.LIGHT_BLOCK_RADIUS=Light block radius
+option.LIGHT_BLOCK_RADIUS.comment=Soft-shadow source radius for invisible Minecraft light blocks, in blocks. Zero keeps a point light. Radius changes visibility sampling only, preserving center-distance falloff, light level and trace range. Nonzero uses 8 visibility samples.
+value.LIGHT_BLOCK_RADIUS.0.0=0 (point light)
+
